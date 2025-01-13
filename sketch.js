@@ -36,12 +36,12 @@ function draw() {
   fill(240);
   pixelate(s, t + 4 / N_FRAMES);
 
-  // Update and display fireworks
+  // Update and display the fireworks
   for (let i = fireworks.length - 1; i >= 0; i--) {
     fireworks[i].update();
     fireworks[i].show();
 
-    // Remove finished fireworks
+    // Remove finished fireworks (else decayed)
     if (fireworks[i].done()) {
       fireworks.splice(i, 1);
     }
@@ -120,8 +120,6 @@ class Firework {
   }
 }
 
-
-// Particle class
 // Particle class
 class Particle {
   constructor(x, y, vx, vy, color) {
