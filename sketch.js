@@ -1,3 +1,4 @@
+// Frames per second variable. You can adjust this according to your like. 
 const N_FRAMES = 60;
 
 let backGraph;
